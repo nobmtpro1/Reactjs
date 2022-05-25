@@ -1,0 +1,10 @@
+@import 'reset';
+@import 'mixin';
+@import 'general';
+
+@import './components/header';
+@import './components/iframe';
+
+@import './pages/schedule';
+@import './pages/vod';
+@import './pages/vod_detail';

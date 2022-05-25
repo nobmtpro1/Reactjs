@@ -1,0 +1,172 @@
+.page-vod {
+    display: flex;
+    overflow: hidden;
+    height: 85vh;
+    & > .left {
+        width: p(350);
+        border-right: p(1) rgba(255, 255, 255, 0.1) solid;
+        padding-right: p(0);
+        overflow-y: scroll;
+        /* width */
+        &::-webkit-scrollbar {
+            width: p(8);
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #252c32;
+            border-radius: p(10);
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #252c32;
+        }
+
+        & > .title {
+            font-size: p(14);
+            font-weight: 500;
+            opacity: 0.7;
+            padding: p(30);
+            padding-bottom: p(15);
+            border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+        }
+
+        & > .content {
+            display: flex;
+            flex-direction: column;
+
+            & > .item {
+                display: flex;
+                align-items: center;
+                gap: p(20);
+                padding: p(10) p(30);
+                border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+                cursor: pointer;
+
+                opacity: 0.7;
+
+                &.active {
+                    opacity: 1;
+                    border-right: p(4) #00c8c8 solid;
+                }
+
+                & > .image {
+                    width: p(50);
+                }
+
+                & > .text {
+                    & > .name {
+                        font-size: p(16);
+                        line-height: p(22);
+                    }
+
+                    & > .region {
+                        font-size: p(15);
+                        font-weight: 500;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    & > .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: p(40);
+        padding-left: p(30);
+        padding-right: p(30);
+        padding-top: p(30);
+        overflow-y: scroll;
+        /* width */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        & > .item {
+            & > .title {
+                font-size: p(16);
+                font-weight: 700;
+                margin-bottom: p(20);
+
+                span {
+                    font-size: p(14);
+                    font-weight: 400;
+                }
+            }
+
+            & > .content {
+                display: flex;
+                flex-direction: column;
+
+                & > .row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: p(15);
+                    padding-left: p(100);
+                    border-top: p(1) rgba(255, 255, 255, 0.1) solid;
+                    border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+                    cursor: pointer;
+                    & > .left {
+                        display: flex;
+                        align-items: center;
+
+                        & > .vs {
+                            width: p(80);
+                            font-size: p(14);
+                            font-weight: 600;
+                            opacity: 0.7;
+                            text-align: center;
+                        }
+
+                        & > .team {
+                            display: flex;
+                            align-items: center;
+
+                            &.right {
+                                flex-direction: row-reverse;
+                            }
+
+                            & > .image {
+                                width: p(60);
+                            }
+
+                            & > .name {
+                                width: p(80);
+                                font-size: p(18);
+                                font-weight: bold;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    & > .right {
+                        display: flex;
+                        align-items: center;
+                        gap: p(40);
+                        font-size: p(15);
+                        font-weight: 500;
+                        opacity: 0.7;
+                        text-align: left;
+                        width: p(280);
+
+                        & > .games {
+                            display: flex;
+                            align-items: center;
+                            gap: p(30);
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,655 @@
+.page-vod-detail {
+
+
+    & > .data {
+        display: flex;
+        border-top: p(1) rgba(255, 255, 255, 0.1) solid;
+
+        & > .left {
+            width: p(380);
+            border-right: p(1) rgba(255, 255, 255, 0.1) solid;
+
+            & > .teams {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: black;
+                padding-top: p(10);
+                padding-bottom: p(10);
+
+                & > .vs {
+                    width: p(80);
+                    font-size: p(14);
+                    font-weight: 600;
+                    opacity: 0.7;
+                    text-align: center;
+                }
+
+                & > .team {
+                    display: flex;
+                    align-items: center;
+
+                    &.right {
+                        flex-direction: row-reverse;
+                    }
+
+                    & > .image {
+                        width: p(60);
+                    }
+
+                    & > .name {
+                        width: p(80);
+                        font-size: p(18);
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+            }
+
+            & > .games {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                gap: p(40);
+                padding-top: p(20);
+                padding-bottom: p(20);
+                border-top: p(1) rgba(255, 255, 255, 0.1) solid;
+
+                & > .title {
+                    font-size: p(18);
+                    font-weight: 600;
+                    opacity: 0.7;
+                }
+
+                & > .numbers {
+                    display: flex;
+                    gap: p(40);
+                    font-size: p(17);
+                    opacity: 0.7;
+
+                    & > .number {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            & > .teams-data {
+                & > .dragons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: p(15);
+                    font-weight: 600;
+                    & > div {
+                        flex: 1;
+                        text-align: center;
+                    }
+
+                    & > .text {
+                        opacity: 0.7;
+                    }
+
+                    & > .images {
+                        display: flex;
+                        gap: p(10);
+                        justify-content: flex-end;
+                        padding-right: p(10);
+                        & > .image {
+                            width: p(20);
+                        }
+
+                        &.left {
+                            padding-right: p(0);
+                            padding-left: p(10);
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+
+                & > .lines {
+                    display: flex;
+                    padding: p(20);
+                    gap: p(3);
+                    padding-bottom: 0;
+                    div {
+                        flex: 1;
+                        height: p(4);
+
+                        &:nth-child(1) {
+                            background: #1580b6;
+                        }
+
+                        &:nth-child(2) {
+                            background: #de2f2f;
+                        }
+                    }
+                }
+
+                & > .golds {
+                    display: flex;
+                    padding: p(20);
+                    padding-top: p(5);
+
+                    div {
+                        flex: 1;
+                        text-align: center;
+                    }
+
+                    & > .gold {
+                        font-size: p(16);
+                        font-weight: 500;
+                        text-align: left;
+                        &.right {
+                            text-align: right;
+                        }
+                    }
+
+                    & > .text {
+                        font-size: p(15);
+                        font-weight: 500;
+                        opacity: 0.7;
+                    }
+                }
+
+                & > .details {
+                    display: flex;
+
+                    & > .detail {
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: p(20);
+                        text-align: center;
+                        padding: p(20);
+                        border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+
+                        path {
+                            fill: #4c7184;
+                        }
+
+                        & > .item {
+                            font-size: p(14);
+                            font-weight: 600;
+                            & > .image {
+                                width: p(20);
+                                margin-bottom: p(5);
+                            }
+                        }
+
+                        &.right {
+                            flex-direction: row-reverse;
+                            border-left: p(1) rgba(255, 255, 255, 0.1) solid;
+                            path {
+                                fill: #844c4c;
+                            }
+                        }
+                    }
+                }
+
+                & > .player-data {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: p(10);
+
+                    & > .row {
+                        display: flex;
+                        position: relative;
+                        & > .gap {
+                            position: absolute;
+                            top: 70%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            padding: p(2) p(12);
+                            border-radius: p(20);
+                            border: p(2) #1580b6 solid;
+                            color: #1580b6;
+                            z-index: 1;
+                            font-size: p(12);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: #0a0e13;
+
+                            &.red {
+                                border: p(2) #de2f2f solid;
+                                color: #de2f2f;
+                            }
+                        }
+
+                        & > .col {
+                            flex: 1;
+                            padding: p(20);
+                            border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+
+                            & > .name {
+                                font-size: p(15);
+                                font-weight: 600;
+                            }
+
+                            & > .ingame {
+                                display: flex;
+                                gap: p(10);
+                                margin-top: p(10);
+                                align-items: center;
+
+                                & > .image {
+                                    width: p(60);
+                                    height: p(60);
+
+                                    position: relative;
+                                    img {
+                                        width: 100%;
+                                        height: p(60);
+                                        border-radius: 50%;
+                                    }
+
+                                    & > .level {
+                                        position: absolute;
+                                        width: p(20);
+                                        height: p(20);
+                                        background: black;
+                                        color: white;
+                                        bottom: 0;
+                                        left: 0;
+                                        border-radius: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        font-size: p(10);
+                                    }
+                                }
+
+                                & > .stats {
+                                    font-size: p(12);
+
+                                    & > .stat {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: p(5);
+                                    }
+                                }
+                            }
+
+                            &.right {
+                                border-left: p(1) rgba(255, 255, 255, 0.1) solid;
+                                text-align: right;
+                                & > .ingame {
+                                    flex-direction: row-reverse;
+                                }
+                            }
+
+                            &.active {
+                                & > .ingame {
+                                    & > .image {
+                                        img {
+                                            border: #00c3c3 p(3) solid;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .right {
+            flex: 1;
+
+            & > .options {
+                height: p(84);
+                background: black;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                & > .option {
+                    cursor: pointer;
+                    border-left: p(1) rgba(255, 255, 255, 0.1) solid;
+                    padding: p(0);
+                    font-size: p(14);
+                    height: 100%;
+                    width: p(150);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                    position: relative;
+
+                    .popup {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                        height: auto;
+                        padding: p(10);
+                        background: black;
+                        transform: translateY(-100%);
+                        display: none;
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            & > .vs {
+                & > .champions {
+                    display: flex;
+
+                    & > div {
+                        flex: 1;
+                        padding: p(20);
+                        display: flex;
+                        gap: p(10);
+                        align-items: center;
+                        justify-content: flex-end;
+                        border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+                        & > .text {
+                            & > .name {
+                                font-size: p(16);
+                                font-weight: 600;
+                            }
+
+                            & > .champ {
+                                font-size: p(14);
+                                font-weight: 500;
+                            }
+                        }
+
+                        & > .image {
+                            width: p(70);
+                            height: p(70);
+
+                            position: relative;
+                            img {
+                                width: 100%;
+                                height: p(70);
+                                border-radius: 50%;
+                            }
+
+                            & > .level {
+                                position: absolute;
+                                width: p(25);
+                                height: p(25);
+                                background: black;
+                                color: white;
+                                bottom: 0;
+                                left: 0;
+                                border-radius: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: p(13);
+                                font-weight: 500;
+                            }
+                        }
+
+                        &.right {
+                            flex-direction: row-reverse;
+                            justify-content: flex-end;
+                            border-left: p(1) rgba(255, 255, 255, 0.1) solid;
+                        }
+                    }
+                }
+
+                & > .tabs {
+                    & > .buttons {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: p(20);
+                        padding: p(20);
+                        background: black;
+
+                        & > .button {
+                            width: p(30);
+                            height: p(30);
+                            cursor: pointer;
+                            &.active {
+                                path {
+                                    fill: #00c3c3;
+                                }
+                            }
+                        }
+                    }
+
+                    & > .tab-content {
+                        & > .tab1 {
+                            display: none;
+
+                            &.active {
+                                display: flex;
+                            }
+
+                            & > div {
+                                flex: 1;
+                                padding: p(20);
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                direction: rtl;
+                                border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+                                &.right {
+                                    direction: ltr;
+                                    text-align: left;
+                                    border-left: p(1) rgba(255, 255, 255, 0.1) solid;
+                                }
+
+                                & > .box {
+                                    padding: p(20);
+
+                                    & > .big {
+                                        font-size: p(20);
+                                        font-weight: bold;
+                                        line-height: p(28);
+                                    }
+                                    & > .small {
+                                        font-size: p(13);
+                                        font-weight: 500;
+                                        opacity: 0.8;
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .tab2 {
+                            display: none;
+
+                            &.active {
+                                display: flex;
+                            }
+
+                            & > div {
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                text-align: right;
+                                padding-top: p(20);
+                                padding-bottom: p(50);
+
+                                &.right {
+                                    justify-content: flex-start;
+                                    text-align: left;
+                                    border-left: p(1) rgba(255, 255, 255, 0.1) solid;
+
+                                    & > .item {
+                                        justify-content: flex-end;
+                                        flex-direction: row-reverse;
+                                    }
+                                }
+
+                                & > .item {
+                                    display: flex;
+                                    gap: p(20);
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    padding: p(5) p(20);
+
+                                    & > .image {
+                                        width: p(60);
+                                    }
+
+                                    & > .text {
+                                        & > .name {
+                                            font-size: p(15);
+                                            font-weight: bold;
+                                        }
+
+                                        & > .gold {
+                                            font-size: p(15);
+                                            font-weight: 500;
+                                            opacity: 0.8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .tab3 {
+                            display: none;
+
+                            &.active {
+                                display: flex;
+                            }
+
+                            & > div {
+                                flex: 1;
+                                padding-bottom: p(150);
+                                &:first-child {
+                                    border-right: p(1) rgba(255, 255, 255, 0.1) solid;
+                                }
+
+                                & > .table {
+                                    border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+                                    margin: p(20);
+                                    & > .row {
+                                        display: flex;
+
+                                        & > .cell {
+                                            flex: 1;
+                                            padding: p(5) p(20);
+                                            text-align: center;
+                                            border-top: p(1) rgba(255, 255, 255, 0.1) solid;
+                                            border-right: p(1) rgba(255, 255, 255, 0.1) solid;
+                                            font-size: p(15);
+                                            font-weight: 600;
+                                            &.active {
+                                                background: black;
+                                                color: #00c3c3;
+                                            }
+                                            &.skill {
+                                                border: none;
+                                                padding: p(25);
+                                                padding-bottom: p(10);
+                                            }
+                                            &:last-child {
+                                                border-right: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .tab4 {
+                            display: none;
+
+                            &.active {
+                                display: flex;
+                            }
+
+                            & > div {
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                gap: p(20);
+
+                                &.right {
+                                    border-left: p(1) rgba(255, 255, 255, 0.1) solid;
+                                    & > .item {
+                                        & > .type {
+                                            flex-direction: row-reverse;
+                                            text-align: left;
+                                            justify-content: flex-end;
+                                        }
+                                        & > .content {
+                                            & > .row {
+                                                flex-direction: row-reverse;
+                                                text-align: left;
+                                                justify-content: flex-start;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                & > .item {
+                                    & > .type {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        align-items: center;
+                                        gap: p(10);
+                                        font-size: p(15);
+                                        font-weight: bold;
+                                        margin: p(30);
+                                        padding-bottom: p(10);
+                                        border-bottom: p(1) rgba(255, 255, 255, 0.1) solid;
+
+                                        & > .image {
+                                            width: p(20);
+                                        }
+                                    }
+
+                                    & > .content {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: p(20);
+
+                                        & > .row {
+                                            display: flex;
+                                            gap: p(10);
+                                            justify-content: flex-end;
+                                            align-items: center;
+                                            text-align: right;
+                                            padding: p(5) p(30);
+
+                                            & > .image {
+                                                width: p(180);
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+
+                                                &.big {
+                                                    img {
+                                                        width: 100%;
+                                                    }
+                                                }
+                                                img {
+                                                    width: 70%;
+                                                }
+                                            }
+
+                                            & > .text {
+                                                line-height: p(18);
+                                                & > .name {
+                                                    font-size: p(15);
+                                                    font-weight: bold;
+                                                    line-height: p(22);
+                                                }
+                                                & > .description {
+                                                    font-size: p(12);
+                                                    font-weight: 400;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

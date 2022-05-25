@@ -1,0 +1,58 @@
+.component-header {
+    background: #111;
+    display: flex;
+    padding: p(30) p(50);
+    gap: p(30);
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: p(80);
+    background: black;
+    z-index: 100;
+    
+
+    & > .logo {
+       background: white;
+       border-radius: p(1);
+       cursor: pointer;
+     
+    }
+
+    & > .list {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        text-transform: uppercase;
+        gap: p(30);
+        font-size: p(14);
+        font-weight: 600;
+
+        li{
+            cursor: pointer;
+        }
+
+        li.active{
+            a{
+                color: #10bcdd;
+            }
+        } 
+    }
+
+    & > .language{
+        cursor: pointer;
+
+    }
+
+    & > .login{
+        cursor: pointer;
+        padding: p(10) p(20);
+        background: #006464;
+        font-size: p(12);
+        font-weight: 500;
+        border-radius: p(20);
+    }
+}
